@@ -65,10 +65,10 @@ export default function BarcodeScanner() {
       return false;
     }
 
-    if (roll.length !== 8) {
+    if (roll.length >= 8) {
       toast({
         title: "Invalid Roll Number Format",
-        description: "Roll number must be exactly 5 digits",
+        description: "Roll number must be less than 8 digits",
         variant: "destructive",
       });
       return false;
