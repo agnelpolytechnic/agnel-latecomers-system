@@ -65,14 +65,14 @@ export default function BarcodeScanner() {
       return false;
     }
 
-    // if (roll.length !== 5) {
-    //   toast({
-    //     title: "Invalid Roll Number Format",
-    //     description: "Roll number must be exactly 5 digits",
-    //     variant: "destructive",
-    //   });
-    //   return false;
-    // }
+    if (roll.length !== 8) {
+      toast({
+        title: "Invalid Roll Number Format",
+        description: "Roll number must be exactly 5 digits",
+        variant: "destructive",
+      });
+      return false;
+    }
 
     return true;
   };
